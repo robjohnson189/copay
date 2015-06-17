@@ -170,6 +170,15 @@ angular
           },
         }
       })
+      .state('offlineJoin', {
+        url: '/offlineJoin',
+        needProfile: true,
+        views: {
+          'main': {
+            templateUrl: 'views/offlineJoin.html'
+          },
+        }
+      })
       .state('import', {
         url: '/import',
         needProfile: true,

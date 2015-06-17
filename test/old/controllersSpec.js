@@ -884,6 +884,25 @@ describe("Unit: Controllers", function() {
     });
   });
 
+  describe('Offline Join Controller', function() {
+    var ctrl;
+    beforeEach(inject(function($controller, $rootScope) {
+      scope = $rootScope.$new();
+      ctrl = $controller('OfflineJoinController', {
+        $scope: scope,
+      });
+    }));
+
+    it('should exist', function() {
+      should.exist(ctrl);
+    });
+    describe('#join', function() {
+      it('should work with invalid form', function() {
+        scope.join(invalidForm);
+      });
+    });
+  });
+
   describe('paymentUriController Controller', function() {
     var what;
     beforeEach(inject(function($controller, $rootScope, $location) {
